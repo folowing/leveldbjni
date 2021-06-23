@@ -98,9 +98,9 @@
           </nativeSrcDependency>
           <platform>osx</platform>
           <configureArgs>
+            <arg>--with-jni-jdk=${env.JAVA_HOME}</arg>
             <arg>--with-leveldb=${env.LEVELDB_HOME}</arg>
             <arg>--with-snappy=${env.SNAPPY_HOME}</arg>
-            <arg>--with-universal</arg>
           </configureArgs>
         </configuration>
       </plugin>

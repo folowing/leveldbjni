@@ -97,8 +97,7 @@
             </Embed-Dependency>
             <Embed-Transitive>true</Embed-Transitive>
             <Bundle-NativeCode>
-              META-INF/native/osx/libleveldbjni.jnilib;osname=macosx;processor=arm64,
-              META-INF/native/linux64/libleveldbjni.so;osname=Linux;processor=x86-64,
+              META-INF/native/osx/libleveldbjni.jnilib;osname=macosx;processor=aarch64
             </Bundle-NativeCode>
          </instructions>
         </configuration>
