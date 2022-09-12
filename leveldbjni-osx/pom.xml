@@ -85,7 +85,7 @@
               <goal>build</goal>
             </goals>
           </execution>
-        </executions>        
+        </executions>
         <configuration>
           <name>leveldbjni</name>
           <classified>false</classified>

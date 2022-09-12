@@ -52,6 +52,14 @@
       <artifactId>leveldbjni</artifactId>
       <version>1.23</version>
     </dependency>
+
+    <dependency>
+      <groupId>org.fusesource.leveldbjni</groupId>
+      <artifactId>leveldbjni</artifactId>
+      <version>1.23</version>
+      <type>test-jar</type>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 
   <build>
@@ -66,6 +74,7 @@
           <classesDirectory>${basedir}/target/generated-sources/hawtjni/lib</classesDirectory>
         </configuration>
       </plugin>
+
       <plugin>
         <groupId>org.fusesource.hawtjni</groupId>
         <artifactId>maven-hawtjni-plugin</artifactId>
@@ -87,7 +96,9 @@
             <classifier>native-src</classifier>
             <type>zip</type>
           </nativeSrcDependency>
+          <platform>linux64</platform>
           <configureArgs>
+            <arg>--with-jni-jdk=${env.JAVA_HOME}</arg>
             <arg>--with-leveldb=${env.LEVELDB_HOME}</arg>
             <arg>--with-snappy=${env.SNAPPY_HOME}</arg>
           </configureArgs>
